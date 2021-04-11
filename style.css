@@ -35,9 +35,11 @@ h1 {
   padding-top: 20px;
   line-height: 2rem;
 }
-header {
+
+#menu {
   background-color: #5cdb94;
   justify-content: space-around;
+  position: fixed;
   align-items: center;
   display: flex;
   width: 100%;
@@ -57,6 +59,7 @@ li a {
   color: white;
   font-size: large;
 }
+
 .title-text {
   text-align: center;
   padding-top: 2rem;
@@ -81,11 +84,13 @@ ul li a:hover {
   background-size: cover;
   color: #fff;
 }
+
 .lokasi {
   background-image: url(img/Jayanit-cjr.jpg);
   background-size: cover;
   color: #fff;
 }
+
 .row:after {
   content: "";
   display: table;
@@ -101,8 +106,13 @@ ul li a:hover {
 .card {
   background-color: #e6fff1;
   border-radius: 8px;
-  margin: 20px;
+  margin: 0 20px 20px 20px;
   padding-bottom: 30px;
+}
+
+#top-page {
+  background-color: #9fffb7;
+  padding-top: 100px;
 }
 
 .artikel,
@@ -113,8 +123,13 @@ ul li a:hover {
   margin: auto;
   border-radius: 8px 8px 0px 0px;
 }
+
 .artikel {
   cursor: pointer;
+}
+
+#ronded-img {
+  border-radius: 8px;
 }
 
 .left {
@@ -177,13 +192,6 @@ input[type="submit"]:hover,
   margin: 5px 2px;
 }
 
-footer {
-  color: white;
-  padding: 20px;
-  text-align: center;
-  background: #5cdb94;
-}
-
 .title-text {
   padding: 30px;
   font-size: 40px;
@@ -215,6 +223,13 @@ span {
 
 .btn_wrap:hover span {
   transform: translateX(-280px);
+}
+
+footer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  background: #5cdb94;
 }
 
 @media screen and (max-width: 700px) {
