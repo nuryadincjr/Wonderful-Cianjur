@@ -37,14 +37,14 @@
             <div class="title-text">
                 <h1>Contact Us</h1>
             </div>
-            <form>
-                <label for="name">Your Name</label>
-                <input type="text" name="name" placeholder="Your full name..">
+            <form name="abu-contact">
+                <label for="nama">Your Name</label>
+                <input type="text" name="nama" id="name" placeholder="Your full name..">
                 <label for="email">Email</label>
-                <input type="email" name="email" placeholder="Your email address..">
-                <label for="message">Message</label>
-                <textarea name="message" placeholder="Type your message.."></textarea>
-                <input type="submit" value="Submit">
+                <input type="email" name="email" id="email" placeholder="Your email address..">
+                <label for="pesan">Message</label>
+                <textarea name="pesan" id="pesan" placeholder="Type your message.."></textarea>
+                <input type="submit" class="btn-kirim" value="Submit">
             </form>
         </div>
     </section>
@@ -62,6 +62,26 @@
             &copy; Copyright 2021
         </p>
     </footer>
+
+    <script>
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbytCNboa19kjkt6AtgGM0TACeyGErR4HFVlsRiRPjQu2k9LtjZLyQUjIdCpNGYWRsfCZw/exec'
+        const form = document.forms['abu-contact']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    console.log('Success!', response)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
 </body>
 
 </html>

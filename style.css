@@ -245,3 +245,18 @@ footer {
     padding: 0;
   }
 }
+
+.alert {
+  padding: 20px;
+  background-color: #5cdb94;
+  opacity: 0.8;
+  color: #245d32;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.not-visible {
+  visibility: hidden;
+}
